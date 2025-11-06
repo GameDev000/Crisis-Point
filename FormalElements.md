@@ -173,16 +173,19 @@
 
 <h4>Adventure Escape: Space Crisis</h4>
 <p>משחק הרפתקאות ופתרון חידות המתרחש בתחנת חלל עתידנית. השחקן נכנס לנעליה של מפקדת בשם מורגן ומנסה לגלות את סיבת היעלמות הצוות. המשחק משלב פתרון בעיות תחת לחץ וביצוע אתגרי הישרדות ייחודיים. <em>(App Store)</em></p>
+<a href="https://apps.apple.com/il/app/adventure-escape-space-crisis/id1089068515?l=he">קישור</a>
 
 ![alt text](adventure_escape.png)
 
 <h4>Block Blast!</h4>
 <p>משחק פאזלים לוגי קלאסי עם אתגרי חשיבה, מתאים לכל הגילאים. המשחק מעודד תכנון, חשיבה לוגית ועיכוב תגובה תחת מגבלת זמן. <em>(App Store)</em></p>
+<a href="https://apps.apple.com/il/app/block-blast/id1617391485?l=he">קישור</a>
 
 ![alt text](Block_Blast.png)
 
 <h4>The Globe Dilemma</h4>
 <p>משחק סימולציה כלכלית עולמית בו השחקן מנהל מדינה ומנסה לשפר את כלכלתה, לצמוח ולכבוש משאבים. מדמה התמודדות עם אתגרים מערכתיים גלובליים. <em>(PC)</em></p>
+<a href="https://www.myabandonware.com/game/the-global-dilemma-guns-or-butter-wk">קישור</a>
 
 ![alt text](The_Global_Dilemma.png)
 
