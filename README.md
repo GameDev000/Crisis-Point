@@ -31,6 +31,6 @@
 </div>
 
 
-![alt text](image.png)
+![alt text](photo_2025-11-05_12-42-49.jpg)
 
 </div>
