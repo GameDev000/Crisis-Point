@@ -11,7 +11,7 @@
 <p align="center">
   <img src="photo_2025-11-05_12-42-49.jpg" alt="Crisis Point – תמונת המשחק" width="600">
 </p>
-<p><em>(Gimini)</em></p>
+<p><em>(Gemini)</em></p>
 
 <hr>
 
