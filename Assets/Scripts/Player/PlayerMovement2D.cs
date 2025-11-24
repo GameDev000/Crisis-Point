@@ -13,10 +13,7 @@ public class PlayerMovement2D : MonoBehaviour
     [SerializeField] private float groundCheckRadius = 0.1f;
 
     [Header("Input Actions")]
-    [SerializeField] private InputAction move = new InputAction(
-        type: InputActionType.Value,
-        expectedControlType: nameof(Vector2));
-
+    [SerializeField] private InputAction move = new InputAction(type: InputActionType.Value,expectedControlType: nameof(Vector2));
     [SerializeField] private InputAction jump = new InputAction(
         type: InputActionType.Button);
 
@@ -42,12 +39,8 @@ public class PlayerMovement2D : MonoBehaviour
 
     private void Update()
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(
-            groundCheck.position,
-            groundCheckRadius);
-
+        Collider2D[] hits = Physics2D.OverlapCircleAll(groundCheck.position,groundCheckRadius);
         isGrounded = false;
-
         foreach (var hit in hits)
         {
             if (hit.gameObject == this.gameObject)
@@ -69,7 +62,6 @@ public class PlayerMovement2D : MonoBehaviour
     {
         Vector2 input = move.ReadValue<Vector2>();
         float moveX = input.x;
-
         rb.linearVelocity = new Vector2(moveX * moveSpeed, rb.linearVelocity.y);
     }
 }

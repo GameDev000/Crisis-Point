@@ -19,7 +19,9 @@ public class CrisisBackground : MonoBehaviour
     private void Awake()
     {
         if (!mainCamera)
+        {
             mainCamera = Camera.main;
+        }
     }
 
     private void Update()

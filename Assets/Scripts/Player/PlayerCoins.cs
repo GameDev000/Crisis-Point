@@ -23,7 +23,10 @@ public class PlayerCoins : MonoBehaviour
 
     public void AddCoins(int amount)
     {
-        if (amount <= 0) return;
+        if (amount <= 0)
+        {
+            return;
+        }
 
         Coins += amount;
         UpdateCoinsUI();
@@ -31,8 +34,14 @@ public class PlayerCoins : MonoBehaviour
 
     public bool TrySpendCoins(int amount)
     {
-        if (amount <= 0) return true;
-        if (Coins < amount) return false;
+        if (amount <= 0)
+        {
+            return true;
+        }
+        if (Coins < amount)
+        {
+            return false;
+        }
 
         Coins -= amount;
         UpdateCoinsUI();
