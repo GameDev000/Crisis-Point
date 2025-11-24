@@ -71,7 +71,6 @@ public class PlayerCoins : MonoBehaviour
                 UpdateCoinsUI();
                 yield return new WaitForSeconds(1f / coinsPerSecond);
             }
-            
         }
     }
 }

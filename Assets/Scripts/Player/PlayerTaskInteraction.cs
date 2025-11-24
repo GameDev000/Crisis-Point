@@ -56,8 +56,8 @@ public class PlayerTaskInteraction : MonoBehaviour
         var rb = bucket.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-          rb.simulated = false;  
-        } 
+            rb.simulated = false;
+        }
 
         var col = bucket.GetComponent<Collider2D>();
         if (col != null)
@@ -85,8 +85,6 @@ public class PlayerTaskInteraction : MonoBehaviour
             {
                 Destroy(carriedBucket);
             }
-                
-
             carriedBucket = null;
             hasBucket = false;
             playerCoins.AddCoins(50);
@@ -99,7 +97,6 @@ public class PlayerTaskInteraction : MonoBehaviour
             {
                 Destroy(carriedCloth);
             }
-                
             playerCoins.AddCoins(50);
             carriedCloth = null;
             hasCloth = false;
