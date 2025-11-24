@@ -4,7 +4,7 @@
 
 <h2>תיאור כללי</h2>
 <p>
-משחק תלת/דו-ממדי בנושא משבר כלכלי. השחקן נע בעולם קניות ובשלב מסוים נכנס
+משחק דו-ממדי בנושא משבר כלכלי. השחקן נע בעולם קניות ובשלב מסוים נכנס
 למצב "משבר" שבו עליו לבצע משימות הישרדות קוגניטיביות (כמו שאיבת מים, כביסה, אוכל)
 כדי לצבור מטבעות ולצאת מהמשבר. במטלה זו מומש תהליך ליבה של משימת "כביסה":
 שאיבת מים מהבאר, הבאתם למכונת הכביסה, איסוף בגדים והעברתם למכונה.
@@ -32,14 +32,16 @@
     </ul>
   </li>
   <li>במקביל, מערכת המטבעות (PlayerCoins) מעדכנת סכום מטבעות ומציגה אותם ב-UI.
-      אפשר להשתמש בכמות המטבעות כדי להשפיע על הרקע (צבע, מצב משבר וכו').</li>
+      כמות המטבעות משפיעה על הרקע (צבע, מצב משבר וכו').</li>
 </ol>
 
 <h2>מבנה פרויקט (תיקיות)</h2>
 
 <ul>
+  <div dir="rtl" lang="he">
   <li><strong>Scripts/Player</strong>
     <ul>
+      <div dir="rtl" lang="he">
       <li><code>PlayerMovement2D.cs</code> – תנועה וקפיצה של השחקן.</li>
       <li><code>PlayerTaskInteraction.cs</code> – אינטראקציות עם דלי, מכונה ובגדים.</li>
       <li><code>PlayerCoins.cs</code> – ניהול מטבעות ו-UI.</li>
@@ -47,13 +49,15 @@
   </li>
   <li><strong>Scripts/Environment</strong>
     <ul>
+      <div dir="rtl" lang="he">
       <li><code>SimpleLever.cs</code> – לוגיקת הידית, הסיבוב, הדלי והחבל.</li>
       <li><code>WashingMachineMover.cs</code> – תנועת מכונת הכביסה כאשר היא "פעילה".</li>
     </ul>
   </li>
   <li><strong>Scripts/Objects</strong>
     <ul>
-      <li><code>ClothesPile.cs</code> (אם בשימוש) – ניהול ערימת בגדים (אופציונלי).</li>
+      <div dir="rtl" lang="he">
+      <li><code>ClothesPile.cs</code> ניהול ערימת בגדים.</li>
     </ul>
   </li>
   <li><strong>UI</strong>
@@ -63,6 +67,7 @@
   </li>
   <li><strong>Prefabs</strong>
     <ul>
+      <div dir="rtl" lang="he">
       <li>Player</li>
       <li>Bucket</li>
       <li>WashingMachine</li>
@@ -135,37 +140,5 @@
 +-------------------------+
 </pre>
 
-<h2>שימוש במטבעות והרקע</h2>
+<a href="https://example.com">itch</a>
 
-<p>
-מחלקת <code>PlayerCoins</code> היא מקור האמת לכמות המטבעות. כל מערכות אחרות (UI, רקע, לוגיקת קושי)
-אמורות להשתמש במשתנה <code>Coins</code> שלה.
-לדוגמה, סקריפט הרקע יכול לקבל רפרנס ל-<code>PlayerCoins</code> ולעדכן את צבע הרקע לפי כמות המטבעות:
-</p>
-
-<pre><code class="language-csharp">
-public class BackgroundMoodController : MonoBehaviour
-{
-    [SerializeField] private PlayerCoins playerCoins;
-    [SerializeField] private SpriteRenderer background;
-
-    private void Update()
-    {
-        int coins = playerCoins.Coins;
-        float t = Mathf.InverseLerp(-500f, 500f, coins);
-        Color c = Color.Lerp(Color.gray, Color.white, t);
-        background.color = c;
-    }
-}
-</code></pre>
-
-<h2>הרצה ובדיקה</h2>
-<ol>
-  <li>להריץ את הסצנה הראשית בסביבת Unity.</li>
-  <li>לנוע בעזרת מקשי התנועה ולקפוץ על הידית כדי להעלות את הדלי.</li>
-  <li>לאסוף את הדלי כאשר הוא למעלה ולגשת איתו למכונת הכביסה.</li>
-  <li>לאחר שהמכונה קיבלה מים והחלה לנוע, לגשת לערימת בגדים, לאסוף בגד קטן ולהביא אותו למכונה.</li>
-  <li>לעקוב אחרי שינוי המטבעות ותגובות הרקע בהתאם ללוגיקת המשחק.</li>
-</ol>
-
-</div>
