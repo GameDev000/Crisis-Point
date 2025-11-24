@@ -6,14 +6,11 @@ public class CrisisBackground : MonoBehaviour
     [Header("Coins")]
     [SerializeField] private PlayerCoins playerCoins;
     [SerializeField] private int timeToCrisis = 0;
-
     [Header("Background")]
     [SerializeField] private SpriteRenderer backgroundSprite;
-    [SerializeField] private Camera mainCamera;      
-
+    [SerializeField] private Camera mainCamera;
     [Header("Crisis Look")]
     [SerializeField] private Color crisisColor = Color.gray;
-
     private bool _hasSwitched = false;
 
     private void Awake()
@@ -25,7 +22,7 @@ public class CrisisBackground : MonoBehaviour
     }
 
     private void Update()
-    { 
+    {
         int coins = playerCoins.Coins;
         if (_hasSwitched)
         {
