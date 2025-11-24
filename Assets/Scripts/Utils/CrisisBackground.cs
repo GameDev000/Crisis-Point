@@ -26,7 +26,7 @@ public class CrisisBackground : MonoBehaviour
         int coins = playerCoins.Coins;
         if (_hasSwitched)
         {
-            if( coins > timeToCrisis)
+            if(coins>timeToCrisis)
             {
                 _hasSwitched = false;
 
