@@ -28,7 +28,6 @@ public class CrisisBackground : MonoBehaviour
         {
             if(coins > timeToCrisis)
             {
-                // Switch back to normal mode
                 _hasSwitched = false;
 
                 if (backgroundSprite != null)
@@ -42,7 +41,6 @@ public class CrisisBackground : MonoBehaviour
 
                 Debug.Log("Crisis mode OFF – background restored");
             }
-            
         }
         if (coins <= timeToCrisis)
         {
