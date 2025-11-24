@@ -140,5 +140,5 @@
 +-------------------------+
 </pre>
 
-<a href="https://example.com">itch</a>
+<a href="https://itamar-raz-dev-game.itch.io/crisis-point-coregame">itch</a>
 
