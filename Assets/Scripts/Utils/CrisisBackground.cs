@@ -1,9 +1,11 @@
 using UnityEngine;
+using TMPro;
 
 public class CrisisBackground : MonoBehaviour
 {
-    [Header("Timing")]
-    [SerializeField] private float timeToCrisis = 15f;
+    [Header("Coins")]
+    [SerializeField] private PlayerCoins playerCoins;
+    [SerializeField] private int timeToCrisis = 0;
 
     [Header("Background")]
     [SerializeField] private SpriteRenderer backgroundSprite;
@@ -12,7 +14,6 @@ public class CrisisBackground : MonoBehaviour
     [Header("Crisis Look")]
     [SerializeField] private Color crisisColor = Color.gray;
 
-    private float _timer = 0f;
     private bool _hasSwitched = false;
 
     private void Awake()
@@ -22,13 +23,29 @@ public class CrisisBackground : MonoBehaviour
     }
 
     private void Update()
-    {
+    { 
+        int coins = playerCoins.Coins;
         if (_hasSwitched)
-            return;
+        {
+            if(coins > timeToCrisis)
+            {
+                // Switch back to normal mode
+                _hasSwitched = false;
 
-        _timer += Time.deltaTime;
+                if (backgroundSprite != null)
+                {
+                    backgroundSprite.color = Color.white;
+                }
+                if (mainCamera != null)
+                {
+                    mainCamera.backgroundColor = Color.white;
+                }
 
-        if (_timer >= timeToCrisis)
+                Debug.Log("Crisis mode OFF – background restored");
+            }
+            
+        }
+        if (coins <= timeToCrisis)
         {
             SwitchToCrisisMode();
         }
